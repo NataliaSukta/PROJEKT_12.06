@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezerwacja wizyty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body background="fototapety-fryzjer-bezszwowe-tlo.jpg">
+  
+
+    <div class="wrapper">
+        <div class="title">
+            Zarezerwuj swoją wizytę
+        </div>
+
+        <form action=".\connect.php" method="post">
+            <div class="form" id="form">
+
+
+                <div class="inputfield">
+                    <label>IMIĘ*</label>
+                    <input type="text" class="input" id="imie" name="imie" required>
+                </div>
+
+                <div class="inputfield">
+                    <label>NAZWISKO*</label>
+                    <input type="text" class="input" id="nazwisko" name="nazwisko" required>
+                </div>
+
+                <div class="inputfield">
+                    <label>PŁEĆ*</label>
+                    <div class="custom_select" id="plec" name="plec">
+                        <select name="wybranaPlec" required>
+                            <option value="">Wybierz</option>
+                            <option name="plec" value="Mężczyzna">Mężczyzna</option>
+                            <option name="plec" value="Kobieta">Kobieta</option>
+                         </select>
+                    </div>
+                </div>
+
+                <div class="inputfield">
+                    <label>NUMER TELEFONU*</label>
+                    <input type="text" class="input" id="telefon" name="telefon" pattern="\+?[0-9]{9,11}" required>
+                </div>
+
+                <div class="inputfield">
+                    <label>ULICA*</label>
+                    <input type="text" class="input" id="ulica" name="ulica" required>
+                </div>
+
+                <div class="inputfield">
+                    <label>NUMER DOMU*</label>
+                    <input type="text" class="input" id="dom" name="dom" required>
+                </div>
+
+                <div class="inputfield">
+                    <label>NUMER LOKALU</label>
+                    <input type="text" class="input" id="lokal" name="lokal">
+                </div>
+                
+                <div class="inputfield">
+                    <label>MIEJSCOWOŚĆ*</label>
+                    <input type="text" class="input" id="lokal" name="lokal">
+                </div>
+
+                <div class="inputfield">
+                    <label class="text" for="input-date">WYBIERZ DATĘ*</label>
+                    <input type="date" id="data" name="data" class="input" required>
+                </div>
+
+                <div class="inputfield">
+                    <label>WYBIERZ GODZINĘ*</label>
+                    <div class="custom_select" id="godzina" name="godzina">
+                        <select id="hours" name="wybranaGodzina" required>
+                            <option value="">Wybierz</option>
+                            <option value="9:00:00">9:00</option>
+                            <option value="10:00:00">10:00</option>
+                            <option value="11:00:00">11:00</option>
+                            <option value="12:00:00">12:00</option>
+                            <option value="13:00:00">13:00</option>
+                            <option value="14:00:00">14:00</option>
+                            <option value="15:00:00">15:00</option>
+                            <option value="16:00:00">16:00</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="inputfield">
+                    <label>AKCEPTUJĘ WARUNKI REZERWACJI*</label>
+                    <label class="check">
+            <input type="checkbox" required>
+            <span class="checkmark"></span>
+          </label>
+                </div>
+
+                <div class="inputfield">
+                    <input type="submit" value="Rezerwuj" class="btn" id="przycisk">
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
